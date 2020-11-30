@@ -6,7 +6,7 @@ import { Text } from "@fluentui/react/lib/Text"
 import $ from 'jquery';
 
 
-class Resources extends React.Component {
+class PageNotFound extends React.Component {
 
     componentDidMount() {
         $(".parallax").each(function () {
@@ -23,16 +23,12 @@ class Resources extends React.Component {
 
     render() {
         return (
-            <div style={{ color: NeutralColors.gray30, overflowY: 'hidden' }} className="parallax vh-100" data-bg="linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/robot_1.jpg')">
-                <div className="container vh-100" style={{ overflowY: 'scroll' }}>
-                    <div className="py-5">
+            <div className="row flex-grow-1" style={{ color: NeutralColors.gray30 }}>
+                <div className="col my-auto">
+                    <div className="container py-5">
                         <main>
-                            <div className="d-none d-lg-block">
-                                <h1 className="display-1">Resources</h1>
-                            </div>
-                            <div className="d-lg-none">
-                                <h1 className="display-4">Resources</h1>
-                            </div>
+                            <h1>404 - Page Not Found</h1>
+                            <p>We're sorry, the page you requested does not exist.</p>
                         </main>
                     </div>
                 </div>
@@ -41,4 +37,4 @@ class Resources extends React.Component {
     }
 }
 
-export default hot(module)(Resources);
+export default hot(module)(PageNotFound);
